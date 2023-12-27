@@ -48,20 +48,20 @@ window.onload = function() {
    // context.fillStyle = "green";
   //  context.fillRect(dino.x,dino.y,dino.width,dino.height)
     dinoImg = new Image();
-    dinoImg.src =  "./img/dino.png";
+    dinoImg.src =  "dino.png";
     dinoImg.onload = function() 
     {
         context.drawImage(dinoImg,dino.x,dino.y,dino.width,dino.height);
     }
 
     cactus1Img =  new Image();
-    cactus1Img.src = "./img/cactus1.png";
+    cactus1Img.src = "cactus1.png";
     
     cactus2Img =  new Image();
-    cactus2Img.src = "./img/cactus2.png";
+    cactus2Img.src = "cactus2.png";
    
     cactus3Img =  new Image();
-    cactus3Img.src = "./img/cactus3.png";
+    cactus3Img.src = "cactus3.png";
     
 
     requestAnimationFrame(update);
@@ -69,10 +69,10 @@ window.onload = function() {
     document.addEventListener("keydown",moveDino);
 }
 let bgImage = new Image();
-bgImage.src = "./img/bgImg.jpg";
+bgImage.src = "bgImg.jpg";
 
 let gameOverImg = new Image();
-gameOverImg.src= "./img/game-over.png";
+gameOverImg.src= "game-over.png";
 function showGameOver(){
  context.drawImage(gameOverImg,boardWidth/2 - gameOverImg.width/2, boardHeight/2-gameOverImg.height/2);
 }
@@ -96,7 +96,7 @@ function update(){
 
             if(detectCollision(dino,cactus)){
                 gameOver=true;
-                dinoImg.src ="./img/dino-dead.png";
+                dinoImg.src ="dino-dead.png";
                // dinoImg.src ="./img/dino-dead1.png";
                 //dinoImg.onload = function(){
                 ///    context.drawImage(dinoImg,dino.x,dino.y,dino.width,dino.height)
